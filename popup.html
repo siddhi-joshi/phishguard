@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>PhishGuard</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header id="head" data-verdict="loading">
+    <p class="host" id="host">Checking this page</p>
+    <h1 id="title">Scanning</h1>
+    <p class="summary" id="summary"></p>
+  </header>
+
+  <div class="meter" role="img" aria-label="Risk meter" id="meter">
+    <div class="zone z-safe"></div>
+    <div class="zone z-warn"></div>
+    <div class="zone z-bad"></div>
+    <span class="marker" id="marker"></span>
+  </div>
+  <p class="score" id="score"></p>
+
+  <section>
+    <h2>What we found</h2>
+    <ul id="reasons"></ul>
+  </section>
+
+  <section class="manual">
+    <label for="url">Check a link without opening it</label>
+    <div class="row">
+      <input id="url" type="text" placeholder="Paste a link" autocomplete="off" spellcheck="false">
+      <button id="check" type="button">Check link</button>
+    </div>
+  </section>
+
+  <footer>These are rule-based checks, not a guarantee. When unsure, go to the site by typing its address yourself.</footer>
+
+  <script src="analyzer.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
