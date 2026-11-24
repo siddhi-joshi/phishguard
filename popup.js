@@ -4,7 +4,7 @@ const COPY = {
   safe: ['Looks safe', 'No common phishing signs found in this address.'],
   suspicious: ['Be careful', 'Some things about this page look off. Do not enter passwords or card details unless you are sure.'],
   dangerous: ['Likely phishing', 'This page matches several phishing patterns. Leave it and do not sign in.'],
-  skip: ['Can’t check this page', 'PhishGuard only checks http and https websites.']
+  skip: ["Can't check this page", 'PhishGuard only checks http and https websites.']
 };
 
 // Runs inside the open page (injected), so it must not use outside variables.
